@@ -1,0 +1,6 @@
+ #!/bin/sh
+ 
+ FG='#aaaaaa'
+ BG='#1a1a1a'
+ #FONT='Sans10'
+ conky | dzen2 -e - -h '16' -w '1920' -ta c -fg $FG -bg $BG -fn $FONT &

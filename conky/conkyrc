@@ -1,0 +1,11 @@
+ background no
+out_to_console yes
+out_to_x no
+update_interval 1
+total_run_times 0
+
+
+TEXT
+^fg(\#3399FF)<<<^fg() ^fg(\#3399FF)Arch Linux^fg() ${kernel} | ^fg(\#3399FF)Cpu:^fg() ${cpu}% | ^fg(\#3399FF)Mem: ^fg()${memperc}% | ^fg(\#3399FF)Swap:^fg() ${swap} | ^fg(\#3399FF)Net Down:^fg() ${downspeedf eth0} | ^fg(\#3399FF)Net Up:^fg() ${upspeedf eth0} | ^fg(\#3399FF)Uptime: ^fg()${uptime} | ^fg(\#3399FF)Email:^fg() ${execpi 300 python ~/gmail.py} - | ^fg(\#3399FF)Date/Time:^fg() ${time %a %b %d %Y %l:%M %p} | ^fg(\#3399FF)Rob Graves^fg() ^fg(\#3399FF)>>>^fg()
+
+# Arch Linux  |  Cpu: ${cpu}%  |  Mem: ${memperc}%  |  Net: ${downspeedf eth0} / ${upspeedf eth0}  |  Uptime: ${uptime}  |  ${time %a %b %d %Y %l:%M %p}
