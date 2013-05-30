@@ -1,0 +1,20 @@
+#gap_y -1000
+ 
+background no
+double_buffer yes 
+out_to_console yes
+own_window no 
+#own_window_type desktop
+#update_interval 1.0 
+#font -*-terminus-*-*-*-*-12-*-*-*-*-*-iso8859-*
+ 
+#TEXT
+#${kernel} \
+#${cpu}% \
+#Mem: $memperc% \
+#${time %a %b %d %Y %l:%M %p}
+
+
+TEXT
+^fg(\#3399FF)<<<^fg() ^fg(\#3399FF)Gentoo^fg() ${kernel} | ^fg(\#3399FF)Cpu:^fg() ${cpu}% | ^fg(\#3399FF)Mem: ^fg()${memperc}% | ^fg(\#3399FF)Swap:^fg() ${swap} | ^fg(\#3399FF)Net Down:^fg() ${downspeedf enp3s0} | ^fg(\#3399FF)Net Up:^fg() ${upspeedf enp3s0} | ^fg(\#3399FF)Uptime: ^fg()${uptime} | ^fg(\#3399FF)Date/Time:^fg() ${time %a %b %d %Y %l:%M %p} | ^fg(\#3399FF)Rob Graves^fg() ^fg(\#3399FF)>>>^fg()
+
