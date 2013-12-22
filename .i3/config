@@ -18,13 +18,13 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 exec --no-startup-id nitrogen --restore
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id xscreensaver -no-splash
-exec --no-startup-id compton --config ~/.compton.conf -b
-#exec --no-startup-id xcompmgr -fF -I-.002 -O-.003 -D6 -c -C -t-5 -l-5 -r4.2 -o.55 
+#exec --no-startup-id compton --config ~/.compton.conf -b
+exec --no-startup-id xcompmgr -fF -I-.002 -O-.003 -D6 -c -C -t-5 -l-5 -r4.2 -o.55 
 #exec --no-startup-id xcompmgr
-exec conky -c ~/scripts/.conkyrc | dzen2 -p -e - -h '16' -w '1920' -ta c
-exec --no-startup-id mpd
-exec --no-startup-id spacefm --daemon
-exec --no-startup-id pnmixer
+#exec conky -c ~/scripts/.conkyrc | dzen2 -p -e - -h '16' -w '1920' -ta c
+#exec --no-startup-id mpd
+#exec --no-startup-id spacefm --daemon
+#exec --no-startup-id pnmixer
 exec --no-startup-id nm-applet
 
 # Use Mouse+$mod to drag floating windows to their wanted position
@@ -75,7 +75,8 @@ bindsym $mod+f fullscreen
 # change container layout (stacked, tabbed, default)
 bindsym $mod+s layout stacking
 bindsym $mod+w layout tabbed
-bindsym $mod+e layout default
+#bindsym $mod+e layout default
+bindsym $mod+e layout toggle split
 
 # toggle tiling / floating
 bindsym $mod+Shift+space floating toggle
@@ -115,9 +116,11 @@ bindsym $mod+Shift+parenleft move container to workspace 9
 bindsym $mod+Shift+parenright move container to workspace 10
 
 ##  moving to workspaces
-workspace_auto_back_and_forth yes
-bindsym $mod+z workspace back_and_forth
-bindsym $mod+Shift+z move container to workspace back_and_forth
+#workspace_auto_back_and_forth yes
+#bindsym $mod+z workspace back_and_forth
+#bindsym $mod+Shift+z move container to workspace back_and_forth
+bindsym $mod+Shift+n workspace next
+bindsym $mod+shift+p workspace prev
 
 # reload the configuration file
 bindsym $mod+Shift+C reload
@@ -158,12 +161,13 @@ bar {
     status_command i3status --config ~/.i3status.conf
     mode dock
     modifier Mod4
-    position bottom
+    position top
     workspace_buttons yes
     font -*-clean-*-*-*-*-8-*-*-*-*-*-*-*
 
     colors {
-        statusline #4A6EFF
+        #statusline #4A6EFF
+	statusline #666666
         background #000000
         focused_workspace #4c7899 #285577 #ffffff
         active_workspace #333333 #5f676a #ffffff
