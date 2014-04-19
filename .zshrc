@@ -14,10 +14,10 @@ ZSH_THEME="candy"
 # Set to this to use case-sensitive completion
 # CASE_SENSITIVE="true"
 
-# Comment this out to disable bi-weekly auto-update checks
+# Uncomment this to disable bi-weekly auto-update checks
 # DISABLE_AUTO_UPDATE="true"
 
-# Uncomment to change how many often would you like to wait before auto-updates occur? (in days)
+# Uncomment to change how often before auto-updates occur? (in days)
 # export UPDATE_ZSH_DAYS=13
 
 # Uncomment following line if you want to disable colors in ls
@@ -26,8 +26,16 @@ ZSH_THEME="candy"
 # Uncomment following line if you want to disable autosetting terminal title.
 # DISABLE_AUTO_TITLE="true"
 
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
+
 # Uncomment following line if you want red dots to be displayed while waiting for completion
 # COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
 
 # Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
@@ -37,7 +45,25 @@ plugins=(git)
 source $ZSH/oh-my-zsh.sh
 
 # Customize to your needs...
-export PATH=$PATH:/usr/local/bin:/usr/bin:/bin:/opt/bin:/usr/x86_64-pc-linux-gnu/gcc-bin/4.6.3:/usr/games/bin
-alias rickroll='curl https://raw.github.com/keroserene/rickrollrc/master/roll.sh | bash'
-alias steam='STEAM_RUNTIME=1 steam'
-alias atitemp='aticonfig --od-gettemperature'
+export PATH=$PATH:/usr/lib/lightdm/lightdm:/usr/local/sbin:/usr/local/bin:/usr/sbin:/usr/bin:/sbin:/bin:/usr/games
+
+export EDITOR=/usr/bin/vim
+
+alias sprunge="curl -F 'sprunge=<-' http://sprunge.us"
+alias server='ssh robgraves@69.205.140.68 -p 9999'
+alias desktop='ssh robgraves@69.205.140.68 -p 9969'
+alias python='python3'
+
+PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+unset GNOME_KEYRING_CONTROL
+
+export PERL_LOCAL_LIB_ROOT="/home/robgraves/perl5";
+export PERL_MB_OPT="--install_base /home/robgraves/perl5";
+export PERL_MM_OPT="INSTALL_BASE=/home/robgraves/perl5";
+export PERL5LIB="/home/robgraves/perl5/lib/perl5/x86_64-linux-gnu-thread-multi:/home/robgraves/perl5/lib/perl5";
+export PATH="/home/robgraves/perl5/bin:$PATH";
+alias shutdown='sudo shutdown -h now'
+alias reboot='sudo reboot'
+
+alias proxy='ssh -D 8080 robgraves@www.spoonbomb.com -p 9969'
+alias ipaddress='curl ipecho.net/plain ; echo'
