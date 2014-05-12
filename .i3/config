@@ -104,16 +104,16 @@ bindsym $mod+9 workspace 9 server
 bindsym $mod+0 workspace 10 robgraves
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1
-bindsym $mod+Shift+at move container to workspace 2
-bindsym $mod+Shift+numbersign move container to workspace 3
-bindsym $mod+Shift+dollar move container to workspace 4
-bindsym $mod+Shift+percent move container to workspace 5
-bindsym $mod+Shift+asciicircum move container to workspace 6
-bindsym $mod+Shift+ampersand move container to workspace 7
-bindsym $mod+Shift+asterisk move container to workspace 8
-bindsym $mod+Shift+parenleft move container to workspace 9
-bindsym $mod+Shift+parenright move container to workspace 10
+bindsym $mod+Shift+exclam move container to workspace 1 system
+bindsym $mod+Shift+at move container to workspace 2 terminal
+bindsym $mod+Shift+numbersign move container to workspace 3 code
+bindsym $mod+Shift+dollar move container to workspace 4 irc
+bindsym $mod+Shift+percent move container to workspace 5 www
+bindsym $mod+Shift+asciicircum move container to workspace 6 web
+bindsym $mod+Shift+ampersand move container to workspace 7 vim
+bindsym $mod+Shift+asterisk move container to workspace 8 media
+bindsym $mod+Shift+parenleft move container to workspace 9 server
+bindsym $mod+Shift+parenright move container to workspace 10 robgraves
 
 ##  moving to workspaces
 workspace_auto_back_and_forth yes
@@ -128,6 +128,8 @@ bindsym $mod+Shift+C reload
 bindsym $mod+Shift+R restart
 # exit i3 (logs you out of your X session)
 bindsym $mod+Shift+E exit
+
+new_window 1pixel
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
