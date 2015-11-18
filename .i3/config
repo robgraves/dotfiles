@@ -13,6 +13,7 @@ set $mod Mod4
 
 # font for window titles. ISO 10646 = Unicode
 font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
+#font pango:System San Francisco Display 13
 
 ##  autostarts
 exec --no-startup-id nitrogen --restore
@@ -27,14 +28,6 @@ exec --no-startup-id compton -b -c -f
 #exec --no-startup-id spacefm --daemon
 #exec --no-startup-id pnmixer
 exec --no-startup-id nm-applet
-
-## Experimenting...
-#exec --no-startup=id i3-msg 'workspace 6 web; exec /usr/bin/firefox'
-#exec --no-startup=id i3-msg 'workspace 5 www; exec /usr/bin/thunderbird'
-
-
-## assign programs to workspaces
-#assign [class="^Firefox$"] -> 6 web
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -100,29 +93,48 @@ bindsym $mod+a focus parent
 #bindcode $mod+d focus child
 bindsym $mod+d focus child
 
+set $workspace1 "1 system"
+set $workspace2 "2 terminal"
+set $workspace3 "3 code"
+set $workspace4 "4 irc"
+set $workspace5 "5 mail"
+set $workspace6 "6 web"
+set $workspace7 "7 vim"
+set $workspace8 "8 media"
+set $workspace9 "9 server"
+set $workspace10 "10 robgraves"
+
+assign [class="Thunderbird"] $workspace5
+assign [class="Firefox"] $workspace6
+
+exec /usr/bin/thunderbird
+exec /usr/bin/firefox
+
 # switch to workspace
-bindsym $mod+1 workspace 1 system
-bindsym $mod+2 workspace 2 terminal
-bindsym $mod+3 workspace 3 code
-bindsym $mod+4 workspace 4 irc
-bindsym $mod+5 workspace 5 www
-bindsym $mod+6 workspace 6 web
-bindsym $mod+7 workspace 7 vim
-bindsym $mod+8 workspace 8 media
-bindsym $mod+9 workspace 9 server
-bindsym $mod+0 workspace 10 robgraves
+bindsym $mod+1 workspace $workspace1
+bindsym $mod+2 workspace $workspace2
+bindsym $mod+3 workspace $workspace3
+bindsym $mod+4 workspace $workspace4
+bindsym $mod+5 workspace $workspace5
+#bindsym $mod+6 workspace 6 web
+bindsym $mod+6 workspace $workspace6
+bindsym $mod+7 workspace $workspace7
+bindsym $mod+8 workspace $workspace8
+bindsym $mod+9 workspace $workspace9
+bindsym $mod+0 workspace $workspace10
 
 # move focused container to workspace
-bindsym $mod+Shift+exclam move container to workspace 1 system
-bindsym $mod+Shift+at move container to workspace 2 terminal
-bindsym $mod+Shift+numbersign move container to workspace 3 code
-bindsym $mod+Shift+dollar move container to workspace 4 irc
-bindsym $mod+Shift+percent move container to workspace 5 www
-bindsym $mod+Shift+asciicircum move container to workspace 6 web
-bindsym $mod+Shift+ampersand move container to workspace 7 vim
-bindsym $mod+Shift+asterisk move container to workspace 8 media
-bindsym $mod+Shift+parenleft move container to workspace 9 server
-bindsym $mod+Shift+parenright move container to workspace 10 robgraves
+bindsym $mod+Shift+exclam move container to workspace $workspace1
+bindsym $mod+Shift+at move container to workspace $workspace2
+bindsym $mod+Shift+numbersign move container to workspace $workspace3
+bindsym $mod+Shift+dollar move container to workspace $workspace4
+bindsym $mod+Shift+percent move container to workspace $workspace5
+#bindsym $mod+Shift+asciicircum move container to workspace 6 web
+bindsym $mod+Shift+asciicircum move container to workspace $workspace6
+bindsym $mod+Shift+ampersand move container to workspace $workspace7
+bindsym $mod+Shift+asterisk move container to workspace $workspace8
+bindsym $mod+Shift+parenleft move container to workspace $workspace9
+bindsym $mod+Shift+parenright move container to workspace $workspace10
 
 ##  moving to workspaces
 workspace_auto_back_and_forth yes
@@ -163,7 +175,7 @@ new_window 1pixel
 #bindsym XF86AudioPrev exec playerctl previous
 
 #bindsym $mod+Control+l exec i3lock -i /home/robgraves/Pictures/Wallpapers/pipboy.png
- bindsym $mod+Control+l exec i3lock -d
+bindsym $mod+Control+l exec i3lock -d
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
