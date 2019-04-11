@@ -1,0 +1,80 @@
+#!/bin/bash
+##################################################
+#
+# Matthew Page
+# 04/03/2016
+# 
+# dialogexperiment -    this script is me playing 
+#                       with dialog attempting
+#                       to learn it.
+#
+##################################################
+
+##Old Test Code
+#choice=$(dialog --backtitle "Matt's Bash Scripting" --nocancel --inputbox "Enter a number: " 20 40 3>&1 1>&2 2>&3)
+
+##################################################
+#
+# Functions, Functions, Functions!!!
+#
+##################################################
+
+##Quit function to break out of the whole program
+function quit {
+    exit 0
+}
+
+##Function for Main Menu
+function menu {
+
+choice=$(dialog --backtitle "Matt's Bash Scripting" --title "Main Menu" --menu "Choose one" 30 50 4 "Users" "- Do something with users" "Passwords" "- Do stuff with passwords"  "Groups" "- Do things with groups"  "Quit" "- Exit to desktop" --clear --nocancel 3>&1 1>&2 2>&3)
+
+    if [ "$choice" != "Quit" ]; then
+
+        case $choice in 
+            Users)
+                users                   #calls users function
+                ;;
+            Passwords)
+                passwords               #calls passwords function
+                ;;
+            Groups)
+                groups                  #calls groups function
+                ;;
+            *)
+                echo "Something else.  Where Am I?"
+                ;;
+        esac
+
+    else
+        echo "Quitting..."
+        quit
+    fi
+
+}
+
+function users {
+    echo "Entering Users sub-menu"
+}
+
+function passwords {
+    echo "Entering Passwords sub-menu "
+}
+
+function groups {
+    echo "Entering Groups sub-menu"
+}
+
+##################################################
+#
+# Main Menu
+#
+##################################################
+
+menu
+
+##Old code to probably be deleted
+#clear
+#echo "Your answer was $choice"
+
+exit 0
