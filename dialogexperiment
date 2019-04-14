@@ -1,4 +1,4 @@
-#!/bin/bash
+#!/usr/bin/env bash
 ##################################################
 #
 # Matthew Page
@@ -27,22 +27,31 @@ function quit {
 ##Function for Main Menu
 function menu {
 
-choice=$(dialog --backtitle "Matt's Bash Scripting" --title "Main Menu" --menu "Choose one" 30 50 4 "Users" "- Do something with users" "Passwords" "- Do stuff with passwords"  "Groups" "- Do things with groups"  "Quit" "- Exit to desktop" --clear --nocancel 3>&1 1>&2 2>&3)
+choice=$(dialog --backtitle "Matt's Bash Scripting" \
+                --title "Main Menu" \
+                --clear \
+                --nocancel \
+                --menu "Choose one" 30 50 4 \
+                "Users" "- Do something with users" \
+                "Passwords" "- Do stuff with passwords" \
+                "Groups" "- Do things with groups" \
+                "Quit" "- Exit to desktop" 3>&1 1>&2 2>&3)
 
     if [ "$choice" != "Quit" ]; then
 
         case $choice in 
-            Users)
+            "Users")
                 users                   #calls users function
                 ;;
-            Passwords)
+            "Passwords")
                 passwords               #calls passwords function
                 ;;
-            Groups)
+            "Groups")
                 groups                  #calls groups function
                 ;;
             *)
                 echo "Something else.  Where Am I?"
+                exit 1
                 ;;
         esac
 
