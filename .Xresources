@@ -1,0 +1,20 @@
+!xterm*colorMode:            false
+xterm*background:           Black
+xterm*foreground:           LightGrey
+xterm*termName:             xterm-256-color
+xterm.VT100.color0:         Black
+xterm.VT100.color1:         Red
+xterm.VT100.color2:         Green
+xterm.VT100.color3:         Yellow
+xterm.VT100.color4:         CornflowerBlue
+xterm.VT100.color5:         Magenta
+xterm.VT100.color6:         Cyan
+xterm.VT100.color7:         White
+xterm.VT100.colorBD:        White
+xterm.VT100.colorBDMode:    true
+xterm.VT100.colorUL:        Yellow
+xterm.VT100.colorULMode:    true
+xterm.VT100.cursorColor:    White
+
+xterm*font:                 *-*-*-18-*
+
