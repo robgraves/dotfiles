@@ -28,6 +28,19 @@ exec --no-startup-id compton -b -c -f
 #exec --no-startup-id spacefm --daemon
 #exec --no-startup-id pnmixer
 exec --no-startup-id nm-applet
+#exec --no-startup-id /opt/pia/run.sh
+
+##Experimenting...
+#exec no-startup-id i3-msg 'workspace 1;urxvt -e sh -c "htop;zsh"'
+#exec urxvt -e sh -c "htop;zsh"
+#exec xterm -e "htop"
+#exec xterm -e "ranger"
+#exec urxvt -e sh -c "htop" #works
+#exec --no-startup-id i3-msg 'workspace 2 terminal; exec urxvt -e sh -c "ranger"' #also works
+#exec --no-startup-id i3-msg 'workspace 1 system; exec urxvt -e sh -c "htop"'
+#exec --no-startup-id i3-msg 'workspace 2 terminal; exec urxvt -e sh -c "ls -a"'
+#exec --no-startup-id i3-msg 'workspace 3 code; exec urxvt -e sh -c "cd scripts;ls"'
+#exec --no-startup-id i3-msg 'workspace 4 irc; exec urxvt -e sh -c "server"'
 
 # Use Mouse+$mod to drag floating windows to their wanted position
 floating_modifier $mod
@@ -106,9 +119,11 @@ set $workspace10 "10 robgraves"
 
 assign [class="Thunderbird"] $workspace5
 assign [class="Firefox"] $workspace6
+assign [class="netsurf"] $workspace6
 
 #exec /usr/bin/thunderbird
 #exec /usr/bin/firefox
+#exec /usr/bin/netsurf
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
