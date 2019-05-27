@@ -27,7 +27,8 @@ exec --no-startup-id compton -b -c -f
 #exec --no-startup-id mpd
 #exec --no-startup-id spacefm --daemon
 #exec --no-startup-id pnmixer
-exec --no-startup-id nm-applet
+#exec --no-startup-id nm-applet
+exec --no-startup-id wicd-client --tray
 #exec --no-startup-id /opt/pia/run.sh
 
 ##Experimenting...
@@ -47,6 +48,7 @@ floating_modifier $mod
 
 # start a terminal
 bindsym $mod+Return exec --no-startup-id urxvtc
+#bindsym $mod+Return exec --no-startup-id xterm
 
 # kill focused window
 bindsym $mod+Shift+Q kill
