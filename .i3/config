@@ -29,7 +29,7 @@ exec --no-startup-id compton -b -c -f
 #exec --no-startup-id pnmixer
 #exec --no-startup-id nm-applet
 exec --no-startup-id wicd-client --tray
-#exec --no-startup-id /opt/pia/run.sh
+exec --no-startup-id sleep 10 && /opt/piavpn/bin/pia-client
 
 ##Experimenting...
 #exec no-startup-id i3-msg 'workspace 1;urxvt -e sh -c "htop;zsh"'
