@@ -30,6 +30,7 @@ exec --no-startup-id compton -b -c -f
 #exec --no-startup-id nm-applet
 exec --no-startup-id wicd-client --tray
 #exec --no-startup-id sleep 10 && /opt/piavpn/bin/pia-client
+#exec xautolock -time 15 -locker '/home/robgraves/scripts/bin/lock.sh' &
 
 ##Experimenting...
 #exec no-startup-id i3-msg 'workspace 1;urxvt -e sh -c "htop;zsh"'
@@ -193,7 +194,7 @@ new_window 1pixel
 
 #bindsym $mod+Control+l exec i3lock -i /home/robgraves/Pictures/Wallpapers/pipboy.png
 #bindsym $mod+Control+l exec i3lock -d
-bindsym $mod+Control+l exec /home/robgraves/scripts/lock.sh
+bindsym $mod+Control+l exec /home/robgraves/scripts/bin/lock.sh
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
