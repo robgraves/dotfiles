@@ -1,0 +1,100 @@
+
+These are the packages that would be merged, in order:
+
+Calculating dependencies  ... done!
+[ebuild  N     ] dev-python/sphinx-3.2.1::gentoo  USE="-doc -latex -test" PYTHON_TARGETS="python3_7 (-pypy3) -python3_6 -python3_8 (-python3_9)" 0 KiB
+
+Total: 1 package (1 new), Size of downloads: 0 KiB
+
+>>> Verifying ebuild manifests
+
+
+>>> Emerging (1 of 1) dev-python/sphinx-3.2.1::gentoo
+ * Sphinx-3.2.1.tar.gz BLAKE2B SHA512 size ;-) ...                       [ ok ]
+>>> Unpacking source...
+>>> Unpacking Sphinx-3.2.1.tar.gz to /var/tmp/portage/dev-python/sphinx-3.2.1/work
+>>> Source unpacked in /var/tmp/portage/dev-python/sphinx-3.2.1/work
+>>> Preparing source in /var/tmp/portage/dev-python/sphinx-3.2.1/work/Sphinx-3.2.1 ...
+>>> Source prepared.
+>>> Configuring source in /var/tmp/portage/dev-python/sphinx-3.2.1/work/Sphinx-3.2.1 ...
+>>> Source configured.
+>>> Compiling source in /var/tmp/portage/dev-python/sphinx-3.2.1/work/Sphinx-3.2.1 ...
+ * python3_7: running distutils-r1_run_phase python_compile
+python3.7 setup.py build -j 2
+Traceback (most recent call last):
+  File "setup.py", line 79, in <module>
+    from babel.messages.pofile import read_po
+  File "/usr/lib/python3.7/site-packages/babel/messages/__init__.py", line 12, in <module>
+    from babel.messages.catalog import *
+  File "/usr/lib/python3.7/site-packages/babel/messages/catalog.py", line 24, in <module>
+    from babel.dates import format_datetime
+  File "/usr/lib/python3.7/site-packages/babel/dates.py", line 29, in <module>
+    from babel.util import UTC, LOCALTZ
+  File "/usr/lib/python3.7/site-packages/babel/util.py", line 20, in <module>
+    from babel import localtime
+  File "/usr/lib/python3.7/site-packages/babel/localtime/__init__.py", line 74, in <module>
+    LOCALTZ = get_localzone()
+  File "/usr/lib/python3.7/site-packages/babel/localtime/__init__.py", line 70, in get_localzone
+    return _get_localzone()
+  File "/usr/lib/python3.7/site-packages/babel/localtime/_unix.py", line 126, in _get_localzone
+    return pytz.tzfile.build_tzinfo('local', tzfile)
+  File "/usr/lib/python3.7/site-packages/pytz/tzfile.py", line 29, in build_tzinfo
+    typecnt, charcnt) = unpack(head_fmt, fp.read(head_size))
+struct.error: unpack requires a buffer of 44 bytes
+ * ERROR: dev-python/sphinx-3.2.1::gentoo failed (compile phase):
+ *   (no error message)
+ * 
+ * Call stack:
+ *     ebuild.sh, line  125:  Called src_compile
+ *   environment, line 2967:  Called distutils-r1_src_compile
+ *   environment, line 1198:  Called _distutils-r1_run_foreach_impl 'python_compile'
+ *   environment, line  479:  Called python_foreach_impl 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line 2567:  Called multibuild_foreach_variant '_python_multibuild_wrapper' 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line 2036:  Called _multibuild_run '_python_multibuild_wrapper' 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line 2034:  Called _python_multibuild_wrapper 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line  827:  Called distutils-r1_run_phase 'python_compile'
+ *   environment, line 1191:  Called python_compile
+ *   environment, line 2302:  Called distutils-r1_python_compile
+ *   environment, line 1060:  Called esetup.py 'build' '-j' '2'
+ *   environment, line 1580:  Called die
+ * The specific snippet of code:
+ *       "${@}" || die "${die_args[@]}";
+ * 
+ * If you need support, post the output of `emerge --info '=dev-python/sphinx-3.2.1::gentoo'`,
+ * the complete build log and the output of `emerge -pqv '=dev-python/sphinx-3.2.1::gentoo'`.
+ * The complete build log is located at '/var/tmp/portage/dev-python/sphinx-3.2.1/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/dev-python/sphinx-3.2.1/temp/environment'.
+ * Working directory: '/var/tmp/portage/dev-python/sphinx-3.2.1/work/Sphinx-3.2.1'
+ * S: '/var/tmp/portage/dev-python/sphinx-3.2.1/work/Sphinx-3.2.1'
+
+>>> Failed to emerge dev-python/sphinx-3.2.1, Log file:
+
+>>>  '/var/tmp/portage/dev-python/sphinx-3.2.1/temp/build.log'
+ * Messages for package dev-python/sphinx-3.2.1:
+ * ERROR: dev-python/sphinx-3.2.1::gentoo failed (compile phase):
+ *   (no error message)
+ * 
+ * Call stack:
+ *     ebuild.sh, line  125:  Called src_compile
+ *   environment, line 2967:  Called distutils-r1_src_compile
+ *   environment, line 1198:  Called _distutils-r1_run_foreach_impl 'python_compile'
+ *   environment, line  479:  Called python_foreach_impl 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line 2567:  Called multibuild_foreach_variant '_python_multibuild_wrapper' 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line 2036:  Called _multibuild_run '_python_multibuild_wrapper' 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line 2034:  Called _python_multibuild_wrapper 'distutils-r1_run_phase' 'python_compile'
+ *   environment, line  827:  Called distutils-r1_run_phase 'python_compile'
+ *   environment, line 1191:  Called python_compile
+ *   environment, line 2302:  Called distutils-r1_python_compile
+ *   environment, line 1060:  Called esetup.py 'build' '-j' '2'
+ *   environment, line 1580:  Called die
+ * The specific snippet of code:
+ *       "${@}" || die "${die_args[@]}";
+ * 
+ * If you need support, post the output of `emerge --info '=dev-python/sphinx-3.2.1::gentoo'`,
+ * the complete build log and the output of `emerge -pqv '=dev-python/sphinx-3.2.1::gentoo'`.
+ * The complete build log is located at '/var/tmp/portage/dev-python/sphinx-3.2.1/temp/build.log'.
+ * The ebuild environment file is located at '/var/tmp/portage/dev-python/sphinx-3.2.1/temp/environment'.
+ * Working directory: '/var/tmp/portage/dev-python/sphinx-3.2.1/work/Sphinx-3.2.1'
+ * S: '/var/tmp/portage/dev-python/sphinx-3.2.1/work/Sphinx-3.2.1'
+
+
