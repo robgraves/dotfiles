@@ -20,15 +20,16 @@ exec --no-startup-id nitrogen --restore
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id xscreensaver -no-splash
 #exec --no-startup-id compton --config ~/.compton.conf -b
-exec --no-startup-id compton -b -c -f
+#exec --no-startup-id compton -b -c -f
+exec --no-startup-id picom -d -f
 #####exec --no-startup-id xcompmgr -fF -I-.002 -O-.003 -D6 -c -C -t-5 -l-5 -r4.2 -o.55 
 #exec --no-startup-id xcompmgr
 #exec conky -c ~/scripts/.conkyrc | dzen2 -p -e - -h '16' -w '1920' -ta c
 #exec --no-startup-id mpd
 #exec --no-startup-id spacefm --daemon
 #exec --no-startup-id pnmixer
-#exec --no-startup-id nm-applet
-exec --no-startup-id wicd-client --tray
+exec --no-startup-id nm-applet
+#exec --no-startup-id wicd-client --tray
 #exec --no-startup-id sleep 10 && /opt/piavpn/bin/pia-client
 #exec xautolock -time 15 -locker '/home/robgraves/scripts/bin/lock.sh' &
 
@@ -38,7 +39,9 @@ exec --no-startup-id wicd-client --tray
 #exec xterm -e "htop"
 #exec xterm -e "ranger"
 #exec urxvt -e sh -c "htop" #works
+#exec --no-startup-id i3-msg 'workspace 1 system; exec sleep 3 && urxvt -e sh -c "btop"' #works
 #exec --no-startup-id i3-msg 'workspace 2 terminal; exec urxvt -e sh -c "ranger"' #also works
+#exec --no-startup-id i3-msg 'workspace 2 terminal; exec sleep 3 && urxvt' #also works
 #exec --no-startup-id i3-msg 'workspace 1 system; exec urxvt -e sh -c "htop"'
 #exec --no-startup-id i3-msg 'workspace 2 terminal; exec urxvt -e sh -c "ls -a"'
 #exec --no-startup-id i3-msg 'workspace 3 code; exec urxvt -e sh -c "cd scripts;ls"'
@@ -123,10 +126,12 @@ set $workspace10 "10 robgraves"
 assign [class="Thunderbird"] $workspace5
 assign [class="Firefox"] $workspace6
 assign [class="netsurf"] $workspace6
+assign [class="midori"] $workspace6
 
 #exec /usr/bin/thunderbird
 #exec /usr/bin/firefox
 #exec /usr/bin/netsurf
+#exec /usr/bin/midori
 
 # switch to workspace
 bindsym $mod+1 workspace $workspace1
