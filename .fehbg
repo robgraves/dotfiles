@@ -1,0 +1,2 @@
+#!/bin/sh
+feh --no-fehbg --bg-fill '/home/robgraves/Pictures/newwallpapers/monkeywallpaper5.jpg'
