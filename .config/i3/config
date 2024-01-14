@@ -16,13 +16,14 @@ font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
 #font pango:System San Francisco Display 13
 
 ##  autostarts
-exec --no-startup-id nitrogen --restore
+#exec --no-startup-id nitrogen --restore
+exec --no-startup-id sh ~/.fehbg &
 exec --no-startup-id urxvtd -q -o -f
 exec --no-startup-id xscreensaver -no-splash
 #exec --no-startup-id compton --config ~/.compton.conf -b
 #exec --no-startup-id compton -b -c -f
-exec --no-startup-id picom -d -f
-#####exec --no-startup-id xcompmgr -fF -I-.002 -O-.003 -D6 -c -C -t-5 -l-5 -r4.2 -o.55 
+exec --no-startup-id picom -d -f 
+#exec --no-startup-id xcompmgr -fF -I-.002 -O-.003 -D6 -c -C -t-5 -l-5 -r4.2 -o.55 
 #exec --no-startup-id xcompmgr
 #exec conky -c ~/scripts/.conkyrc | dzen2 -p -e - -h '16' -w '1920' -ta c
 #exec --no-startup-id mpd
