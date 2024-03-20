@@ -33,8 +33,8 @@ URxvt*background: Grey
 #
 # Xft: DejaVu fonts
 #  Fedora/debian packages: dejavu-sans-mono-fonts/ttf-dejavu 
-#URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
-#URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
+URxvt*font: xft:DejaVu Sans Mono:pixelsize=18:antialias=true:hinting=true
+URxvt*boldFont: xft:DejaVu Sans Mono:bold:pixelsize=18:antialias=true:hinting=true
 #
 # Xft: Liberation fonts
 #  Fedora/debian packages: liberation-mono-fonts/ttf-liberation
@@ -45,6 +45,10 @@ URxvt*background: Grey
 #  Fedora/debian packages: terminus-fonts/xfonts-terminus
 #URxvt*font: xft:terminus:pixelsize=15
 #URxvt*boldFont: xft:terminus:bold:pixelsize=15
+# Xft: Powerline fonts
+#  Fedora/debian packages: powerline-fonts/xfonts-terminus
+#URxvt*font: xft:Inconsolata\ for\ Powerline:pixelsize=15:antialias=true:hinting=true
+#URxvt*boldFont: xft:Inconsolata\ for\ Powerline:bold:pixelsize=15:antialias=true;hinting=true
 
 #*URxvt.font: xft:Monospace:pixelsize=11:antialias=true:hinting=true
 #*URxvt.boldFont: xft:Bitstream Vera Sans Mono:bold:pixelsize=12:antialias=true:hinting=true
@@ -54,8 +58,8 @@ URxvt*background: Grey
 #URxvt*font:-*-courier-medium-r-normal-*-17-*-*-*-*-*-iso8859-1
 #URxvt*boldFont:-*-courier-bold-r-normal-*-17-*-*-*-*-*-iso8859-1
 
-URxvt*font:-misc-*-*-*-normal-*-15-*-*-*-*-*-*-*
-URxvt*BoldFont:-misc-*-*-*-normal-*-15-*-*-*-*-*-*-*
+#URxvt*font:-misc-*-*-*-normal-*-15-*-*-*-*-*-*-*
+#URxvt*BoldFont:-misc-*-*-*-normal-*-15-*-*-*-*-*-*-*
 
 # Replace blue folder colors with a lighter shade for clarity. To
 #  set colored folders and files within urxvt, xterm, and aterm, add

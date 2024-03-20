@@ -245,6 +245,8 @@ bar {
     status_command i3status --config ~/.i3status.conf
     #status_command i3blocks
     mode dock
+    #mode dock | hide | invisible
+	#hidden_state hide
     modifier Mod4
     position top
     workspace_buttons yes

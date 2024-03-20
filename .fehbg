@@ -1,2 +1,15 @@
 #!/bin/sh
-feh --no-fehbg --bg-fill '/home/robgraves/Pictures/newwallpapers/monkeywallpaper5.jpg'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/Wallpaper-Calvin-Hobbes-Winter-5-1.webp' 
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/island_of_hawaii-1920x1080.jpg' 
+feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/CalvinNHobbesStarryNightWallpaper.jpg' 
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/masteryodaarchlinux.png'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/arch-linux-1920x1080.jpg'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/awesomelinux_arch.png'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/monkeywallpaper5.jpg'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/nukearchbeach.jpg'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/tree-beach-side-wallpapers.jpg'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/wallpaper-1001600.png'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/wallpaper-1107219.png'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/archmakepkgnotwar.png'
+#feh --no-fehbg --bg-scale '/home/robgraves/Pictures/newwallpapers/archmakepkgnotwar2.png'
+
