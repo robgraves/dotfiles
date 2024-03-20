@@ -136,6 +136,9 @@ alias doom2="chocolate-doom -iwad ~/software/doom/Doom2.wad"
 alias rebooting="sudo reboot"
 alias shutdowning="sudo shutdown -h now"
 
-alias fastfetch="fastfetch -l arch2 --color blue --logo-color-1 blue --logo-color-2 blue --colors-block-width 0"
+alias surffetch="fastfetch -l Calculate --color yellow --logo-color-1 white --logo-color-2 yellow --colors-block-width 0"
+alias archfetch="fastfetch -l arch2 --color blue --logo-color-1 blue --logo-color-2 blue --colors-block-width 0"
+alias tuxfetch="fastfetch -l linux --color black --logo-color-1 white --logo-color-2 black --colors-block-width 0"
+#archfetch
 
 #eval "$(starship init zsh)"
