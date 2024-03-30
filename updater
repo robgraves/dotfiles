@@ -1,0 +1,74 @@
+#!/bin/bash
+
+################################
+#
+# Script to update Arch Linux
+#
+# Requires: pacman archnews yay
+#		figlet rate-mirrors-bin
+#
+# Matthew Page 03/30/2024
+#
+################################
+
+#quit condition
+quitflag=0
+
+#main script loop
+while [ $quitflag -ne 1 ];
+do
+
+	echo "*************************"
+	figlet Arch
+	echo "*************************"
+	echo "Arch Linux Updater Script"
+	echo "                         "
+	echo " Matthew Page 03/30/2024 "
+	echo "*************************"
+	echo "                         "
+	echo "Select number and hit    "
+	echo "       ENTER to execute  "
+	echo "                         "
+	echo " 1 - Sync Arch repos     "
+	echo " 2 - Check Arch news     "
+	echo " 3 - Update Arch Linux   "
+	echo " 4 - Update AUR packages "
+	echo " 5 - Get faster mirrors  "
+	echo " 6 - Quit                "
+	echo "                         "
+
+	read choice
+	#printf "$choice\n"
+
+	case $choice in
+		1)
+			#1 - Sync Arch repos
+			sudo pacman -Syy
+			;;
+		2)
+			#2 - Check Arch news
+			archnews | less
+			;;
+		3)
+			#3 - Update Arch Linux
+			sudo pacman -Syu
+			;;
+		4)
+			#4 - Update AUR packages
+			yay -Syua
+			;;
+		5)
+			#5 - Get faster mirrors
+			rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist
+			;;
+		6)
+			#6 - Quit script
+			quitflag=1
+			;;
+		*)
+			echo "ERROR: Invalid option! Try again."
+			;;
+	esac
+	#printf "$quitflag\n"
+	
+done
