@@ -34,7 +34,7 @@ do
 	echo " 3 - Update Arch Linux   "
 	echo " 4 - Update AUR packages "
 	echo " 5 - Get faster mirrors  "
-	echo " 6 - Quit                "
+	echo " Q - Quit                "
 	echo "                         "
 
 	read choice
@@ -61,7 +61,11 @@ do
 			#5 - Get faster mirrors
 			rate-mirrors --allow-root --protocol https arch | sudo tee /etc/pacman.d/mirrorlist
 			;;
-		6)
+		Q)
+			#6 - Quit script
+			quitflag=1
+			;;
+		q)
 			#6 - Quit script
 			quitflag=1
 			;;
