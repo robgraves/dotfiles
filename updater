@@ -26,7 +26,7 @@ do
 	echo " Matthew Page 03/30/2024 "
 	echo "*************************"
 	echo "                         "
-	echo "Select number and hit    "
+	echo "Select number and press  "
 	echo "       ENTER to execute  "
 	echo "                         "
 	echo " 1 - Sync Arch repos     "
@@ -71,6 +71,9 @@ do
 			;;
 		*)
 			echo "ERROR: Invalid option! Try again."
+			echo "Press any key."
+			#to create a pause for user to read above message
+			read junk
 			;;
 	esac
 	#printf "$quitflag\n"
